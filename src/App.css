@@ -1,38 +1,71 @@
-.App {
-  text-align: center;
+
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
+/* APP */
+.App{
+  font-family: "Poppins";
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* HOME PAGE */
+.homeContainer{
+  padding-top:5vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.plannerHeader{
+  font-family: "Libre Baskerville";
+  font-weight: 800;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.welcomeBack{
+  font-style:italic;
 }
 
-.App-link {
-  color: #61dafb;
+/*.homeToDoList, .homeCalendar{
+  border: 1px solid #DDDDDD;
+  padding: 0px;
+  margin:0px;
+}*/
+
+.homeToDoListHeader, .homeCal{
+  font-family: "Libre Baskerville" !important;
+  font-weight:700;
+  font-size:25px;
+  background-color:#EEEEEE;
+  border-radius:10px;
+  padding:10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.homeCalEl{
+  width:100%;
+  height:50vh;
+}
+
+.addTaskInput{
+  border-radius: 10px;
+  border: 0px;
+  background-color: #EEEEEE;
+  width:86%;
+  padding:5px;
+}
+
+.addTaskButton{
+  border-radius: 15px;
+  border: 0px;
+  background-color:#CCCCCC;
+  margin-left:10px;
+  padding:3px 10px;
+  color: #686868;
+}
+
+.taskList{
+  margin-left:20px;
+  margin-top: 15px;;
+  margin-bottom:15px;
+}
+
+.taskCheckbox{
+  margin-right:10px;
+}
+
+.taskName{
+  font-size:15px;
 }

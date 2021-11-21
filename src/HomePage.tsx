@@ -3,6 +3,7 @@ import ToDoList from './ToDoList';
 import './App.css';
 import AddTaskBar from './AddTaskBar'
 import { Task } from './App'
+import { Container, Row, Col } from 'react-bootstrap';
 
 const Home = () => {
   const [tasks, setTasks] = useState<Task[]>([]);
@@ -19,13 +20,29 @@ const Home = () => {
     setIndex(index + 1);
   };
 
+
   return (
-    <div className="Home">
-      <h1>Planner of Name</h1>
-      <span>Welcome back Name!</span>
-      <ToDoList tasks={tasks} />
-      <AddTaskBar addTask={addTask} />
-    </div>)
+    <Container className="homeContainer">
+      <div className="home">
+        <Row><Col><h1 className="plannerHeader">Planner of Name</h1></Col></Row>
+        <p className="welcomeBack">
+          ✨ Welcome Back Name! It is currently Monday.
+        </p>
+
+        <hr></hr>
+
+        <Row>
+          <Col xs={6} className="homeToDoListWrapper">
+            <ToDoList tasks={tasks} />
+            <AddTaskBar addTask={addTask} />
+          </Col>
+          <Col xs={6} className="homeCalendarWrapper">
+            <h3 className="homeCal">📅  Your Calendar</h3>
+            <iframe className="homeCalEl" src="https://calendar.google.com/calendar/embed?src=en.usa%23holiday%40group.v.calendar.google.com&ctz=America%2FNew_York"></iframe>
+          </Col>
+        </Row>
+      </div>
+    </Container>)
     ;
 }
 

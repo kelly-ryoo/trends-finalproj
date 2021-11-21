@@ -9,8 +9,8 @@ const AddTaskBar = ({ addTask }: Props) => {
   const [task, setTask] = useState("");
 
   return (<div>
-    <input value={task} onChange={(e) => setTask(e.target.value)}></input>
-    <button onClick={() => {
+    <input className="addTaskInput" value={task} onChange={(e) => setTask(e.target.value)}></input>
+    <button className="addTaskButton" onClick={() => {
       addTask(task);
       setTask("");
     }} disabled={task === ''}>Add</button>
