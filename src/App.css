@@ -15,7 +15,7 @@
   font-weight: 800;
 }
 
-.welcomeBack{
+.welcomeBackItalics{
   font-style:italic;
 }
 
@@ -44,7 +44,8 @@
   border: 0px;
   background-color: #EEEEEE;
   width:86%;
-  padding:5px;
+  padding: 5px 10px;
+  font-size:13px;
 }
 
 .addTaskButton{

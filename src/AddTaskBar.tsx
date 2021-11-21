@@ -9,7 +9,7 @@ const AddTaskBar = ({ addTask }: Props) => {
   const [task, setTask] = useState("");
 
   return (<div>
-    <input className="addTaskInput" value={task} onChange={(e) => setTask(e.target.value)}></input>
+    <input className="addTaskInput" placeholder=" your next task . . ." value={task} onChange={(e) => setTask(e.target.value)}></input>
     <button className="addTaskButton" onClick={() => {
       addTask(task);
       setTask("");

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './App.css';
 import HomePage from './HomePage';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Container, Row, Col, Navbar } from 'react-bootstrap';
 
 export type Task = {
   task: string;
@@ -13,6 +14,7 @@ function App() {
   return (
     <div className="App">
       <HomePage></HomePage>
+
     </div>
   );
 }

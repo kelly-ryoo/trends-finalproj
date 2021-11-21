@@ -25,9 +25,11 @@ const Home = () => {
     <Container className="homeContainer">
       <div className="home">
         <Row><Col><h1 className="plannerHeader">Planner of Name</h1></Col></Row>
-        <p className="welcomeBack">
-          ✨ Welcome Back Name! It is currently Monday.
-        </p>
+        <Row><Col>
+          <p className="welcomeBack">
+            <span className="welcomeBackItalics">✨ Welcome Back! It's a good day to have a good day.</span> ☺
+          </p>
+        </Col></Row>
 
         <hr></hr>
 
