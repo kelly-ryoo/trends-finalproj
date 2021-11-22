@@ -10,17 +10,17 @@ function NavBar() {
         <div className="dropdown-items">
 
           <Dropdown.Item eventKey="1" className="menu-drop">
-            <Link to="/Home">Home</Link>
+            <Link to="/Home">Home & Planner</Link>
           </Dropdown.Item>
 
           <Dropdown.Divider />
 
           <Dropdown.Item eventKey="2" className="menu-drop">
-            <Link to="/WeeklyToDo">Weekly Planner</Link>
+            <Link to="/WeeklyToDo">My Weekly Planner</Link>
           </Dropdown.Item>
 
           <Dropdown.Item eventKey="3" className="menu-drop">
-            <Link to="/HabitTracker">Habit Tracker</Link>
+            <Link to="/HabitTracker">My Habit Tracker</Link>
           </Dropdown.Item>
         </div>
       </DropdownButton>
