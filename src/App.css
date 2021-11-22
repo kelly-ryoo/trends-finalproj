@@ -5,17 +5,27 @@
   font-family: "Poppins";
 }
 
+/* NAV */
+.menu-drop a{
+  color: #343434 !important;
+  text-decoration: none !important;
+  font-size:13px;
+}
+.menuButton{
+  margin-top:-10px;
+}
+
 /* HOME PAGE */
-.homeContainer{
+.ContainerWrap{
   padding-top:5vh;
 }
 
-.plannerHeader{
+.head{
   font-family: "Libre Baskerville";
   font-weight: 800;
 }
 
-.welcomeBackItalics{
+.subheaderItalics{
   font-style:italic;
 }
 
@@ -43,18 +53,21 @@
   border-radius: 10px;
   border: 0px;
   background-color: #EEEEEE;
-  width:86%;
+  width:88%;
   padding: 5px 10px;
   font-size:13px;
+  margin-right:10px;
+  display:inline !important;
 }
 
 .addTaskButton{
   border-radius: 15px;
   border: 0px;
   background-color:#CCCCCC;
-  margin-left:10px;
   padding:3px 10px;
   color: #686868;
+  font-size:13px;
+  display:inline !important;
 }
 
 .taskList{
@@ -69,4 +82,14 @@
 
 .taskName{
   font-size:15px;
+}
+
+
+.card{
+    padding:10px;
+    margin-bottom:5vh;
+}
+
+.dropdown-items a{
+  width:100%;
 }

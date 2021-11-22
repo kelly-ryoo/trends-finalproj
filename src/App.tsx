@@ -1,8 +1,14 @@
 import React, { useState } from 'react';
 import './App.css';
 import HomePage from './HomePage';
+import WeeklyToDo from './WeeklyToDo';
+import HabitTracker from './HabitTracker';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Container, Row, Col, Navbar } from 'react-bootstrap';
+import {
+  Routes,
+  BrowserRouter as Router,
+  Route,
+} from 'react-router-dom'
 
 export type Task = {
   task: string;
@@ -13,8 +19,16 @@ export type Task = {
 function App() {
   return (
     <div className="App">
-      <HomePage></HomePage>
-
+      {/*<HomePage></HomePage>
+      <WeeklyToDo></WeeklyToDo>
+      <HabitTracker></HabitTracker>*/}
+      <Router>
+        <Routes>
+          <Route path="/Home" element={<HomePage />}></Route>
+          <Route path="/WeeklyToDo" element={<WeeklyToDo />}></Route>
+          <Route path="/HabitTracker" element={<HabitTracker />}></Route>
+        </Routes>
+      </Router>
     </div>
   );
 }

@@ -5,14 +5,15 @@ import { Container, Row, Col } from 'react-bootstrap';
 
 type Props = {
   readonly tasks: Task[];
+  readonly taskHeader: string;
 }
 
-const ToDoList = ({ tasks }: Props) => {
+const ToDoList = ({ tasks, taskHeader }: Props) => {
   const [taskL, setTaskL] = useState<Task[]>([]);
 
   return (
     <div className="homeTasksList">
-      <h3 className="homeToDoListHeader">📋  Your To-Do List</h3>
+      <h3 className="homeToDoListHeader">{taskHeader}</h3>
       <div className="taskList">
         {tasks.map(x =>
           <div className="task">
