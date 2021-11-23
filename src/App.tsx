@@ -24,7 +24,7 @@ function App() {
       <HabitTracker></HabitTracker>*/}
       <Router>
         <Routes>
-          <Route path="/Home" element={<HomePage />}></Route>
+          <Route path="/" element={<HomePage />}></Route>
           <Route path="/WeeklyToDo" element={<WeeklyToDo />}></Route>
           <Route path="/HabitTracker" element={<HabitTracker />}></Route>
         </Routes>
