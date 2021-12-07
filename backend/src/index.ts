@@ -1,6 +1,8 @@
 import admin, { ServiceAccount } from 'firebase-admin';
 import express from 'express';
 import * as serviceAccount from '../service-account.json';
+import cors from 'cors';
+import path from 'path';
 
 admin.initializeApp({
   credential: admin.credential.cert(<ServiceAccount>serviceAccount)
@@ -8,10 +10,13 @@ admin.initializeApp({
 
 const db = admin.firestore();
 const app = express();
-const port = 8080;
-
+app.use(cors());
+// deployment
+app.use(express.static(path.join(__dirname, '../frontend/build')))
 // allow request body parsing
 app.use(express.json());
+const port = process.env.PORT || 8080;
+
 
 // check connections
 app.get('/', (_, res) => {
@@ -28,6 +33,7 @@ type Task = {
 type TaskWithID = Task & {
   id: string;
 };
+
 
 // posts collection from db
 const tasksCollection = db.collection('tasks');

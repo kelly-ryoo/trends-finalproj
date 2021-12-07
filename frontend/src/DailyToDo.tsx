@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import type { Task } from './App'
 import './App.css';
+import axios from 'axios';
 import AddTaskBar from './AddTaskBar'
 import ToDoList from './ToDoList'
 
@@ -11,6 +12,13 @@ type Props = {
 const DailyToDoList = ({ day }: Props) => {
   const [tasks, setTasks] = useState<Task[]>([]);
   const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    (async () => {
+      const { data } = await axios.get<Task[]>("/getProducts");
+      setTasks(data);
+    })();
+  }, [tasks]);
 
   const addTask = (task: string) => {
     const newItems = [...tasks, {
