@@ -18,10 +18,6 @@ function NavBar() {
           <Dropdown.Item eventKey="2" className="menu-drop">
             <Link to="/WeeklyToDo">My Weekly Planner</Link>
           </Dropdown.Item>
-
-          <Dropdown.Item eventKey="3" className="menu-drop">
-            <Link to="/HabitTracker">My Habit Tracker</Link>
-          </Dropdown.Item>
         </div>
       </DropdownButton>
     </Dropdown >

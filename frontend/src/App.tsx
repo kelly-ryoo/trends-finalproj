@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import './App.css';
 import HomePage from './HomePage';
 import WeeklyToDo from './WeeklyToDo';
-import HabitTracker from './HabitTracker';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {
   Routes,
@@ -19,14 +18,10 @@ export type Task = {
 function App() {
   return (
     <div className="App">
-      {/*<HomePage></HomePage>
-      <WeeklyToDo></WeeklyToDo>
-      <HabitTracker></HabitTracker>*/}
       <Router>
         <Routes>
           <Route path="/" element={<HomePage />}></Route>
           <Route path="/WeeklyToDo" element={<WeeklyToDo />}></Route>
-          <Route path="/HabitTracker" element={<HabitTracker />}></Route>
         </Routes>
       </Router>
     </div>
